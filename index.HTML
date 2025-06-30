@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Forecaster</title>
+</head>
+
+<body>
+
+    <body class="bg-linear-gradient blue">
+        <div class="container py-4">
+            
+            <h1 class="mb-3 text-center">7-Day Weather Forecast</h1>
+            <h5 class="text-center">Get the latest weather updates for your location!</h5>
+                <p class="text-center">The background color changes based on the <b>current weather condition</b>. Try it out!</p>
+            <form id="locationForm" class="row g-2 mb-4 justify-content-center">
+                <div class="col-12 col-md-4">
+                    <input type="text" id="locationInput" class="form-control" placeholder="Enter city, state or ZIP"
+                        required>
+                </div>
+                <div class="col-6 col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">Get Forecast</button>
+                </div>
+                <div class="col-6 col-md-2">
+                    <button id="toggleUnit" class="btn btn-outline-secondary w-100" type="button">°F / °C</button>
+                </div>
+            </form>
+            <div id="errorMsg" class="alert alert-danger d-none"></div>
+            <div class="text-center mb-3" id="currentInfo"></div>
+            <div id="forecast" class="row gy-4"></div>
+
+            <hr class="my-5">
+
+            <h5 class="text-center">2025 Hurricane Preparedness Information <a
+                    href="https://www.weather.gov/media/mob/pdf/GulfCoastHurricanePrep.pdf">HERE</a>.</h5>
+            <h5 class="text-center">Information for Families <a
+                    href="https://cdpsdocs.state.co.us/safeschools/Resources/FEMA%20Federal%20Emergency%20Management%20Agency/FEMA%20Prepare%20for%20Hurricanes.pdf"
+                    target="_blank">HERE</a></h5>
+                    <br>
+
+
+                    <h3 class="text-center mb-3">NOAA Hurricane Tracker (Atlantic)</h3>
+                    <div class="text-center">
+                        <img src="https://www.nhc.noaa.gov/xgtwo/two_atl_5d0.png"
+                            alt="NOAA Atlantic 5-Day Graphical Tropical Weather Outlook"
+                            style="max-width:100%; height:auto;">
+                    </div>
+                    <br>
+                    <br>
+                    <h3 class="text-center mb-3">For Live hurricane tracking, visit the NOAA Hurricane Map below!</h3>
+                    <div class="d-flex justify-content-center">
+                        <div class="embed-responsive embed-responsive-16by9" style="max-width: 850px; width: 100%;">
+                            <iframe class="embed-responsive-item"
+                                src="https://www.nhc.noaa.gov/gtwo.php?basin=atlc&basin=atlc&fdays=7" width="850px"
+                                height="800px" style="border: 10px solid #050505;" title="NOAA Hurricane Map"
+                                allowfullscreen></iframe>
+
+                        </div>
+                    </div>
+        </div>
+        <br>
+        <br>
+        <h2 class="text-center mb-4"> Quick Hurricane Safety ✅</h2>
+        <p class="text-center">Click on an image to enlarge it.</p>
+        <div class="image-grid">
+            <img src="./images/Hurricane_01.png" class="grid-img" alt="Image 1" />
+            <img src="./images/Hurricane_02.png" class="grid-img" alt="Image 2" />
+            <img src="./images/Hurricane_03.png" class="grid-img" alt="Image 3" />
+            <img src="./images/Hurricane_04.png" class="grid-img" alt="Image 4" />
+            <img src="./images/Hurricane_05.png" class="grid-img" alt="Image 5" />
+            <img src="./images/Hurricane_06.png" class="grid-img" alt="Image 6" />
+            <img src="./images/Hurricane_07.png" class="grid-img" alt="Image 7" />
+        </div>
+        
+        <!-- Modal for enlarged image -->
+        <div id="modal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modal-img">
+        </div>
+        <br>
+        <br>
+        <div class="container mt-5">
+            <footer class="text-center mt-5">
+                <p>Forecaster &copy; 2025, curated by <a href="https://github.com/StudiousCorgi"></a>Studious Corgi!</p>
+                <p>Weather data provided by <a href="https://open-meteo.com/" target="_blank">Open-Meteo</a></p>
+                <p>Hurricane tracker data provided by <a href="https://www.nhc.noaa.gov/" target="_blank">NOAA</a></p>
+            <script src="./js/bootstrap.bundle.js"></script>
+            <script src="./js/script.js"></script>
+    </body>
+
+</html>
